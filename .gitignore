@@ -486,3 +486,30 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
+bin/Debug/net8.0/appsettings.json
+bin/Debug/net8.0/appsettings.json
+bin/Debug/net8.0/Edugo.StudentService.deps.json
+bin/Debug/net8.0/Edugo.StudentService.dll
+bin/Debug/net8.0/Edugo.StudentService.exe
+bin/Debug/net8.0/Edugo.StudentService.pdb
+bin/Debug/net8.0/Microsoft.Bcl.AsyncInterfaces.dll
+Migrations/20250311125631_InitialCreate.cs
+Migrations/20250311125631_InitialCreate.Designer.cs
+Migrations/StudentDbContextModelSnapshot.cs
+obj/Edugo.StudentService.csproj.nuget.dgspec.json
+obj/Edugo.StudentService.csproj.nuget.g.props
+obj/Edugo.StudentService.csproj.nuget.g.targets
+obj/project.assets.json
+obj/project.nuget.cache
+obj/Debug/net8.0/apphost.exe
+obj/Debug/net8.0/Edugo.StudentService.AssemblyInfo.cs
+obj/Debug/net8.0/Edugo.StudentService.AssemblyInfoInputs.cache
+obj/Debug/net8.0/Edugo.StudentService.assets.cache
+obj/Debug/net8.0/Edugo.StudentService.csproj.AssemblyReference.cache
+obj/Debug/net8.0/Edugo.StudentService.csproj.CoreCompileInputs.cache
+obj/Debug/net8.0/Edugo.StudentService.csproj.FileListAbsolute.txt
+obj/Debug/net8.0/Edugo.StudentService.dll
+obj/Debug/net8.0/Edugo.StudentService.GeneratedMSBuildEditorConfig.editorconfig
+obj/Debug/net8.0/Edugo.StudentService.pdb
+obj/Debug/net8.0/ref/Edugo.StudentService.dll
+obj/Debug/net8.0/refint/Edugo.StudentService.dll

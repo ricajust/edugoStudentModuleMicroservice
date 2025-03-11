@@ -1,31 +1,25 @@
-using System;
 using Edugo.StudentService.Domain;
 using Microsoft.EntityFrameworkCore;
-namespace Edugo.StudentService.Data;
 
-public class StudentDbContext : DbContext
+namespace Edugo.StudentService.Data
 {
-	public StudentDbContext(DbContextOptions<StudentDbContext> options) : base(options) { }
+    public class StudentDbContext : DbContext
+    {
+        public StudentDbContext(DbContextOptions<StudentDbContext> options) : base(options) { }
 
-	public DbSet<Student> Students { get; set; }
-	public DbSet<Grade> Grades { get; set; }
-	public DbSet<StudentDiscipline> StudentDisciplines { get; set; }
+        public DbSet<Student> Students { get; set; }
+        public DbSet<Grade> Grades { get; set; }
+        public DbSet<StudentDiscipline> StudentDisciplines { get; set; }
 
-	protected override void OnModelCreating(ModelBuilder modelBuilder)
-	{
-		base.OnModelCreating(modelBuilder);
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
 
-		// Se precisar de configuração extra:
-		modelBuilder.Entity<Student>()
-			.HasMany(s => s.Grades)
-			.WithOne(g => g.Student)
-			.HasForeignKey(g => g.StudentId)
-			.OnDelete(DeleteBehavior.Cascade);
+            modelBuilder.Entity<User>().UseTpcMappingStrategy(); // TPC: Table-per-Concrete-Type
 
-		modelBuilder.Entity<Student>()
-			.HasMany(s => s.StudentDisciplines)
-			.WithOne(sd => sd.Student)
-			.HasForeignKey(sd => sd.StudentId)
-			.OnDelete(DeleteBehavior.Cascade);
-	}
+            modelBuilder.Entity<Student>().ToTable("Students");
+            modelBuilder.Entity<Grade>().ToTable("Grades");
+            modelBuilder.Entity<StudentDiscipline>().ToTable("StudentDisciplines");
+        }
+    }
 }
