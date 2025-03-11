@@ -1,0 +1,6 @@
+@Edugo.StudentService_HostAddress = http://localhost:5154
+
+GET {{Edugo.StudentService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
