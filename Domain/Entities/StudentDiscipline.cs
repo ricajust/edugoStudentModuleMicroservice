@@ -12,7 +12,7 @@ namespace Edugo.StudentService.Domain
         public Guid StudentId { get; set; }
 
         [ForeignKey("StudentId")]
-        public Student Student { get; set; }
+        public required Student Student { get; set; }
 
         public Guid? DisciplineId { get; set; } // Não há tabela Discipline aqui
 

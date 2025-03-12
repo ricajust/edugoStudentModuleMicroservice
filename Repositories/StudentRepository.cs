@@ -15,7 +15,7 @@ namespace Edugo.StudentService.Repositories
 
         public async Task<IEnumerable<Student>> GetAllAsync() => await _context.Students.ToListAsync();
 
-        public async Task<Student> GetByIdAsync(Guid id) => await _context.Students.FindAsync(id);
+        public async Task<Student?> GetByIdAsync(Guid id) => await _context.Students.FindAsync(id);
 
         public async Task AddAsync(Student student)
         {
@@ -29,7 +29,7 @@ namespace Edugo.StudentService.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task<Student> GetByEmailAsync(string email)
+        public async Task<Student?> GetByEmailAsync(string email)
         {
             return await _context.Students.FirstOrDefaultAsync(s => s.Email == email);
         }
